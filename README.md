@@ -44,13 +44,13 @@ python -m venv .venv
 
 3. Activate the virtual environment
    
-On Windows:
+   On Windows:
 
 ```bash
 .venv\Scripts\activate
 ```
 
-On Mac/Linux:
+   On Mac/Linux:
 
 ```bash
 source .venv/bin/activate
@@ -65,6 +65,7 @@ pip install -r requirements.txt
 5. Configure environment variables
    
 Create a .env file with your API keys:
+
 ```bash
 OPENAI_API_KEY=your_openai_api_key
 AIRTABLE_API_KEY=your_airtable_api_key  
@@ -72,22 +73,32 @@ AIRTABLE_BASE_ID=your_base_id
 AIRTABLE_TOKEN=your_airtable_api_token
 OPENAI_MODEL=gpt-your_model
 ```
+
 ---
 
 ## Usage
 Extract Resume Data
-Run the extraction script:
+Run the extraction of a single resume:
 
 ```bash
 python -m src.extract_resume samples/resumes/resume1.docx
 ```
 
+Run the extraction of multiple resumes:
+
+```bash
+python -m src.extract_resume samples/resumes/
+```
+
+
 The script extracts:
+```
 -Name
 -Contact Information
 -Skills
 -Experience
 -Education
+```
 
 ---
 
@@ -104,8 +115,11 @@ If configured, extracted data can be sent to Airtable using airtable_client.py.
 ---
 
 **Notes**
+
+```
 -Make sure your OpenAI API key has enough quota to process resumes.
 -Tested with Python 3.13.
 -Supports DOCX and PDF formats (ensure PDF parsing dependencies are installed).
+```
 
 ---
