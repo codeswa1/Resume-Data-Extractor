@@ -1,0 +1,6 @@
+﻿openai>=1.0.0
+python-dotenv>=1.0.0
+pypdf>=3.9.0
+python-docx>=0.8.11
+requests>=2.31.0
+tenacity>=8.2.2
