@@ -5,6 +5,7 @@ This project extracts and analyzes resumes using OpenAI's API. It supports DOCX 
 ---
 
 ## Project Structure
+```
 Resume-Data-Extractor/
 │
 ├─ .venv/ # Python virtual environment
@@ -22,8 +23,7 @@ Resume-Data-Extractor/
 │ └─ resume3.docx
 │ ├─ resume4.docx
 │ ├─ resume5.docx
-
-
+```
 
 ---
 
@@ -35,25 +35,35 @@ Resume-Data-Extractor/
 git clone  https://github.com/codeswa1/Resume-Data-Extractor.git
 cd Resume-Data-Extractor
 ```
+
 2. Create a virtual environment
    
 ```bash
 python -m venv .venv
 ```
+
 3. Activate the virtual environment
+   
 On Windows:
+
 ```bash
 .venv\Scripts\activate
 ```
+
 On Mac/Linux:
+
 ```bash
 source .venv/bin/activate
 ```
+
 4. Install dependencies
+   
 ```bash
 pip install -r requirements.txt
 ```
+
 5. Configure environment variables
+   
 Create a .env file with your API keys:
 ```bash
 OPENAI_API_KEY=your_openai_api_key
@@ -67,27 +77,35 @@ OPENAI_MODEL=gpt-your_model
 ## Usage
 Extract Resume Data
 Run the extraction script:
+
 ```bash
 python -m src.extract_resume samples/resumes/resume1.docx
 ```
+
 The script extracts:
 -Name
 -Contact Information
 -Skills
 -Experience
 -Education
+
 ---
 
 ## Validate Data
 
 Use validators.py to ensure extracted data meets format requirements (e.g., valid email, phone, skills).
+
 ---
 
 ## Airtable Integration (Optional)
 
 If configured, extracted data can be sent to Airtable using airtable_client.py.
 
+---
+
 **Notes**
 -Make sure your OpenAI API key has enough quota to process resumes.
 -Tested with Python 3.13.
 -Supports DOCX and PDF formats (ensure PDF parsing dependencies are installed).
+
+---
