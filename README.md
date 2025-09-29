@@ -100,19 +100,25 @@ The script extracts:
 -Education
 ```
 
+
 ---
 
-## Validate Data
+
+**Validate Data**
 
 Use validators.py to ensure extracted data meets format requirements (e.g., valid email, phone, skills).
 
+
 ---
 
-## Airtable Integration (Optional)
+
+**Airtable Integration (Optional)**
 
 If configured, extracted data can be sent to Airtable using airtable_client.py.
 
+
 ---
+
 
 **Notes**
 
